@@ -12,6 +12,8 @@ on:
   push:
     branches:
       - main
+      # temporal: permite ver la snake antes del merge (se quita despues)
+      - feat/readme-redesign
 
 jobs:
   generate:
