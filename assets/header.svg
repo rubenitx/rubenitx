@@ -133,7 +133,7 @@
     </g>
 
     <text x="936" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="url(#accent)" letter-spacing="2">
-      GODSPEED // ON
+      BUILDING // ALWAYS
       <animate attributeName="opacity" values="0.45;1;0.45" dur="2.4s" repeatCount="indefinite"/>
     </text>
 
