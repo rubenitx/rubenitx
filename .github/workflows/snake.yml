@@ -1,7 +1,8 @@
-# OPCIONAL — guardar como .github/workflows/snake.yml en el repo rubenmtzb/rubenmtzb
-# Genera la animación de la serpiente con tu paleta (#030712 -> #00D9FF) en la rama "output".
-# Tras el primer run (Actions -> Generate snake -> Run workflow), pega el bloque del final
-# en el README, justo debajo de la sección `04 // Telemetry`.
+# Renders the contribution graph as a snake animation into the "output" branch.
+# The README reads it from raw.githubusercontent.com/<user>/<repo>/output/snake.svg
+#
+# Dot ramp follows the profile spectrum: empty -> blue -> purple -> green,
+# the same three accents used by the header, the dividers and the project covers.
 
 name: Generate snake
 
@@ -12,7 +13,8 @@ on:
   push:
     branches:
       - main
-      # temporal: permite ver la snake antes del merge (se quita despues)
+      # Temporary: lets the snake render before this branch is merged.
+      # Remove once the redesign lands on main.
       - feat/readme-redesign
 
 jobs:
@@ -27,8 +29,8 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake.svg?palette=github-dark&color_snake=#00D9FF&color_dots=#0B1120,#0A3A5C,#0A84FF,#00D9FF,#7DF9FF
-            dist/snake-light.svg?palette=github-light&color_snake=#0A84FF
+            dist/snake.svg?palette=github-dark&color_snake=#EAF9FF&color_dots=#0B1120,#1B3550,#5B9BFF,#C77DFF,#5EE9B5
+            dist/snake-light.svg?palette=github-light&color_snake=#0F172A&color_dots=#EBEDF0,#BFD4FF,#5B9BFF,#B14AED,#00BC7D
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
@@ -37,15 +39,3 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-# ─────────────────────────────────────────────────────────────
-# Bloque a pegar en el README una vez el workflow haya corrido:
-#
-# <p align="center">
-#   <picture>
-#     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rubenmtzb/rubenmtzb/output/snake.svg" />
-#     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rubenmtzb/rubenmtzb/output/snake-light.svg" />
-#     <img src="https://raw.githubusercontent.com/rubenmtzb/rubenmtzb/output/snake.svg" alt="Contribution snake" />
-#   </picture>
-# </p>
-# ─────────────────────────────────────────────────────────────
