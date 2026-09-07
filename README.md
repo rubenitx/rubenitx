@@ -152,77 +152,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
   </tr>
 </table>
 
-<img src="assets/divider.svg" width="100%" alt="" />
-
-## `03` &nbsp;//&nbsp; Track record
-
-<table>
-  <tr>
-    <td><code>2022 — now</code></td>
-    <td><b>Software Engineer</b></td>
-    <td>Egarsat</td>
-    <td>Spring Boot APIs, React + TypeScript frontends, batch processing, Liferay portlets, Docker deployments.</td>
-  </tr>
-  <tr>
-    <td><code>2021 — 2022</code></td>
-    <td><b>Software Developer</b> <sub>internship</sub></td>
-    <td>Universitat Rovira i Virgili</td>
-    <td>Full lifecycle ownership of the SARS-CoV-2 mutation portal: design, development, testing, production.</td>
-  </tr>
-  <tr>
-    <td><code>2021 — 2022</code></td>
-    <td><b>Team Supervisor</b></td>
-    <td>Taco Bell</td>
-    <td>Team leadership and workflow optimisation under high-demand peaks. Where I learned to ship under pressure.</td>
-  </tr>
-  <tr>
-    <td><code>2019 — 2020</code></td>
-    <td><b>Systems Technician</b> <sub>internship</sub></td>
-    <td>BEEP</td>
-    <td>Technical support, IT systems and infrastructure maintenance.</td>
-  </tr>
-</table>
-
-<details>
-  <summary><b>&nbsp;Education &amp; certifications</b> &nbsp;<code>expand</code></summary>
-  <br />
-  <table>
-    <tr>
-      <td><code>2026 — now</code></td>
-      <td><b>Bachelor's in Computer Engineering</b><br /><sub>Universitat Oberta de Catalunya (UOC) · in progress</sub></td>
-    </tr>
-    <tr>
-      <td><code>2025</code></td>
-      <td><b>Advanced Course in DevOps</b> 🏆 <sub>outstanding</sub><br /><sub>INESEM Business School · CI/CD, IaC, monitoring · <a href="https://app.educasign.ai/validation/a2822919-7a1d-4679-861b-1c775147b901">verify</a></sub></td>
-    </tr>
-    <tr>
-      <td><code>2020 — 2022</code></td>
-      <td><b>Web Application Development (DAW)</b> — bioinformatics specialization<br /><sub>Instituto la Guineueta</sub></td>
-    </tr>
-    <tr>
-      <td><code>2018 — 2020</code></td>
-      <td><b>Microcomputer Systems and Networks (SMX)</b><br /><sub>Instituto la Guineueta</sub></td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-      <td><img src="https://img.shields.io/badge/Anthropic-030712?style=flat-square&logo=anthropic&logoColor=D97757" alt="Anthropic" /></td>
-      <td><b>Claude Code in Action</b> · 2026<br /><sub>Agentic workflows, prompt engineering, code automation · <a href="https://verify.skilljar.com/c/7h7wd7qewuw8">verify</a></sub></td>
-    </tr>
-    <tr>
-      <td><img src="https://img.shields.io/badge/Udemy-030712?style=flat-square&logo=udemy&logoColor=A435F0" alt="Udemy" /></td>
-      <td><b>Python &amp; JavaScript Master</b> · 2021<br /><sub><a href="https://www.udemy.com/certificate/UC-b5584cc7-094b-428d-a0c3-55a42951a908/">verify Python</a> · <a href="https://www.udemy.com/certificate/UC-4e22184f-f814-40fe-8016-d75f4dd57edf/">verify JavaScript</a></sub></td>
-    </tr>
-    <tr>
-      <td><img src="https://img.shields.io/badge/Esplai-030712?style=flat-square&logoColor=white" alt="Fundación Esplai" /></td>
-      <td><b>Java Junior Developer</b> · 2021<br /><sub>Enterprise Java, OOP, data structures · <a href="https://badgr.com/public/assertions/K-E-j1zsTliUHrkekOoVBg">verify</a></sub></td>
-    </tr>
-  </table>
-</details>
-
-<img src="assets/divider.svg" width="100%" alt="" />
-
-## `04` &nbsp;//&nbsp; Telemetry
+## `03` &nbsp;//&nbsp; Telemetry
 
 <p align="center">
   <picture>
@@ -247,7 +177,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
 
 <img src="assets/divider.svg" width="100%" alt="" />
 
-## `05` &nbsp;//&nbsp; Working principles
+## `04` &nbsp;//&nbsp; Working principles
 
 <table>
   <tr>
@@ -269,7 +199,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
 
 <img src="assets/divider.svg" width="100%" alt="" />
 
-## `06` &nbsp;//&nbsp; Outside the code
+## `05` &nbsp;//&nbsp; Outside the code
 
 <details>
   <summary><b>&nbsp;Climbing, travel &amp; mechanical keyboards</b> &nbsp;<code>expand</code></summary>
@@ -324,7 +254,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
 
 <img src="assets/divider.svg" width="100%" alt="" />
 
-## `07` &nbsp;//&nbsp; Contact
+## `06` &nbsp;//&nbsp; Contact
 
 <p align="center">
   <b>A manual workflow, or systems that don't talk to each other?</b><br />
