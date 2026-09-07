@@ -99,10 +99,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
   <tr>
     <td width="50%" valign="top">
       <a href="https://yt.rubenitx.me/"><img src="assets/cover-transcriber.svg" width="100%" alt="YouTubeTranscriber — captions pipeline" /></a>
-      <p>
-        <img src="https://img.shields.io/badge/-live-00E5FF?style=flat-square&labelColor=030712" alt="Live" />
-        <img src="https://img.shields.io/badge/-web%20app-1E293B?style=flat-square&labelColor=030712" alt="Web app" />
-      </p>
+      <p><img src="assets/tag-transcriber.svg" height="24" alt="Live · web app" /></p>
       <h3>YouTubeTranscriber</h3>
       <p>Turns a public YouTube video into timestamped text you can read, translate and reuse. Captions pipeline with <code>yt-dlp</code>, <code>whisper.cpp</code> fallback for videos without subtitles, and DeepL for dual-language output. No account required.</p>
       <p>
@@ -115,10 +112,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
     </td>
     <td width="50%" valign="top">
       <a href="https://rubenitx.me/work/finance-core/"><img src="assets/cover-financecore.svg" width="100%" alt="FinanceCore — decoupled financial engine and client layer" /></a>
-      <p>
-        <img src="https://img.shields.io/badge/-private-64748B?style=flat-square&labelColor=030712" alt="Private" />
-        <img src="https://img.shields.io/badge/-product-1E293B?style=flat-square&labelColor=030712" alt="Product" />
-      </p>
+      <p><img src="assets/tag-financecore.svg" height="24" alt="Private · product" /></p>
       <h3>FinanceCore</h3>
       <p>One workspace for accounts, spending, savings goals and crypto holdings. Decoupled architecture — financial engine and client layer evolve independently — with clean domain boundaries, observability and long-term maintainability as first-class concerns.</p>
       <p>
@@ -133,10 +127,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
   <tr>
     <td width="50%" valign="top">
       <a href="http://sarscov2-mutation-portal.urv.cat"><img src="assets/cover-sars.svg" width="100%" alt="SARS-CoV-2 mutation portal — mutations across the viral genome" /></a>
-      <p>
-        <img src="https://img.shields.io/badge/-live-00E5FF?style=flat-square&labelColor=030712" alt="Live" />
-        <img src="https://img.shields.io/badge/-research-1E293B?style=flat-square&labelColor=030712" alt="Research" />
-      </p>
+      <p><img src="assets/tag-sars.svg" height="24" alt="Live · research" /></p>
       <h3>The Mutational Landscape of SARS-CoV-2</h3>
       <p>Interactive portal for exploring mutations across the SARS-CoV-2 genome, built end to end with <b>Universitat Rovira i Virgili</b> — from design to production. Interdisciplinary work at the intersection of software engineering and bioinformatics, with results published in <i>IJMS</i>.</p>
       <p>
@@ -149,10 +140,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
     </td>
     <td width="50%" valign="top">
       <a href="https://rubenitx.me"><img src="assets/cover-portfolio.svg" width="100%" alt="rubenitx.me — static bilingual portfolio with a hidden Godspeed mini-game" /></a>
-      <p>
-        <img src="https://img.shields.io/badge/-live-00E5FF?style=flat-square&labelColor=030712" alt="Live" />
-        <img src="https://img.shields.io/badge/-open%20source-1E293B?style=flat-square&labelColor=030712" alt="Open source" />
-      </p>
+      <p><img src="assets/tag-portfolio.svg" height="24" alt="Live · open source" /></p>
       <h3>rubenitx.me</h3>
       <p>Personal site and CV: static output, bilingual EN/ES, printer-ready résumé route and interactive case studies. And a Killua <i>Godspeed</i> mini-game hidden behind the header — three levels, section orbs and an electric aura. Because a portfolio should also be fun to break.</p>
       <p>
@@ -197,10 +185,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
       <sub><i>turns caffeine into commits</i></sub>
     </td>
     <td valign="middle">
-      <p><b>Architecture before code.</b> Domain boundaries first; the framework is an implementation detail, not the design.</p>
-      <p><b>Ship it, then observe it.</b> Software that reaches production and tells you how it's doing beats software that's elegant on a branch.</p>
-      <p><b>AI to code faster — not to think less.</b> Agentic workflows for the repetitive part, human judgement for the decisions that cost money later.</p>
-      <p><b>Detail is not decoration.</b> The same care that goes into an API contract goes into a keyboard's switch feel and a README's spacing.</p>
+      <img src="assets/principles.svg" width="100%" alt="Working principles: architecture before code; ship it, then observe it; AI to code faster, not to think less; detail is not decoration." />
     </td>
   </tr>
 </table>
@@ -222,25 +207,25 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
       <td><code>build 01</code></td>
       <td><b>Neo65</b></td>
       <td><sub>65% · gasket mount · wired hotswap</sub></td>
-      <td><img src="https://img.shields.io/badge/-assembled-00E5FF?style=flat-square&labelColor=030712" alt="assembled" /></td>
+      <td><img src="assets/tag-assembled.svg" height="24" alt="assembled" /></td>
     </tr>
     <tr>
       <td><code>build 02</code></td>
       <td><b>HHKB Professional Hybrid Type-S</b></td>
       <td><sub>60% · Topre 45g · Snow + Wasabi · hand-lubed</sub></td>
-      <td><img src="https://img.shields.io/badge/-daily%20driver-00E5FF?style=flat-square&labelColor=030712" alt="daily driver" /></td>
+      <td><img src="assets/tag-daily.svg" height="24" alt="daily driver" /></td>
     </tr>
     <tr>
       <td><code>build 03</code></td>
       <td><b>EVO75</b></td>
       <td><sub>75% · butterfly leaf spring · tri-mode</sub></td>
-      <td><img src="https://img.shields.io/badge/-assembled-00E5FF?style=flat-square&labelColor=030712" alt="assembled" /></td>
+      <td><img src="assets/tag-assembled.svg" height="24" alt="assembled" /></td>
     </tr>
     <tr>
       <td><code>build 04</code></td>
       <td><b>Corne V4</b></td>
       <td><sub>42-key split · RP2040 · low-profile</sub></td>
-      <td><img src="https://img.shields.io/badge/-in%20progress-64748B?style=flat-square&labelColor=030712" alt="in progress" /></td>
+      <td><img src="assets/tag-wip.svg" height="24" alt="in progress" /></td>
     </tr>
   </table>
 
