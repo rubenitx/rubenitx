@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-label="Working principles">
+  <title>Working principles</title>
+  <desc>Architecture before code. Domain boundaries first; the framework is an implementation detail, not the design. Ship it, then observe it. Software that reaches production and tells you how it&#x27;s doing beats software that&#x27;s elegant on a branch. AI to code faster — not to think less. Agentic workflows for the repetitive part, human judgement for the decisions that cost money later. Detail is not decoration. The same care that goes into an API contract goes into a keyboard&#x27;s switch feel and a README&#x27;s spacing.</desc>
+  <defs>
+    <linearGradient id="rowHi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B9BFF" stop-opacity="0.13"/>
+      <stop offset="70%" stop-color="#5B9BFF" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#5B9BFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <g opacity="0"><rect x="6" y="12" width="628" height="58" rx="8" fill="url(#rowHi)"/><animate attributeName="opacity" values="1;0;0;0;1" dur="13s" repeatCount="indefinite"/></g>
+    <rect x="14" y="15" width="2.5" height="48" rx="1.25" fill="#5B9BFF" opacity="0.35"/>
+    <g opacity="0"><rect x="14" y="15" width="2.5" height="48" rx="1.25" fill="#C7DCFF"/><animate attributeName="opacity" values="1;0;0;0;1" dur="13s" repeatCount="indefinite"/></g>
+    <text x="26" y="27" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="8" letter-spacing="1.4" fill="#334155">01</text>
+    <text x="44" y="27" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="0.4" fill="#5B9BFF">Architecture before code.</text>
+    <g opacity="0"><text x="44" y="27" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="0.4" fill="#C7DCFF">Architecture before code.</text><animate attributeName="opacity" values="1;0;0;0;1" dur="13s" repeatCount="indefinite"/></g>
+    <text x="44" y="44" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#94A3B8">Domain boundaries first; the framework is an implementation detail, not</text>
+    <text x="44" y="57" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#94A3B8">the design.</text>
+  </g>
+  <g>
+    <g opacity="0"><rect x="6" y="78" width="628" height="58" rx="8" fill="url(#rowHi)"/><animate attributeName="opacity" values="0;1;0;0;0" dur="13s" repeatCount="indefinite"/></g>
+    <rect x="14" y="81" width="2.5" height="48" rx="1.25" fill="#5EE9B5" opacity="0.35"/>
+    <g opacity="0"><rect x="14" y="81" width="2.5" height="48" rx="1.25" fill="#BDF6DF"/><animate attributeName="opacity" values="0;1;0;0;0" dur="13s" repeatCount="indefinite"/></g>
+    <text x="26" y="93" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="8" letter-spacing="1.4" fill="#334155">02</text>
+    <text x="44" y="93" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="0.4" fill="#5EE9B5">Ship it, then observe it.</text>
+    <g opacity="0"><text x="44" y="93" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="0.4" fill="#BDF6DF">Ship it, then observe it.</text><animate attributeName="opacity" values="0;1;0;0;0" dur="13s" repeatCount="indefinite"/></g>
+    <text x="44" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#94A3B8">Software that reaches production and tells you how it&#x27;s doing beats</text>
+    <text x="44" y="123" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#94A3B8">software that&#x27;s elegant on a branch.</text>
+  </g>
+  <g>
+    <g opacity="0"><rect x="6" y="144" width="628" height="58" rx="8" fill="url(#rowHi)"/><animate attributeName="opacity" values="0;0;1;0;0" dur="13s" repeatCount="indefinite"/></g>
+    <rect x="14" y="147" width="2.5" height="48" rx="1.25" fill="#C77DFF" opacity="0.35"/>
+    <g opacity="0"><rect x="14" y="147" width="2.5" height="48" rx="1.25" fill="#EBCDFF"/><animate attributeName="opacity" values="0;0;1;0;0" dur="13s" repeatCount="indefinite"/></g>
+    <text x="26" y="159" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="8" letter-spacing="1.4" fill="#334155">03</text>
+    <text x="44" y="159" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="0.4" fill="#C77DFF">AI to code faster — not to think less.</text>
+    <g opacity="0"><text x="44" y="159" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="0.4" fill="#EBCDFF">AI to code faster — not to think less.</text><animate attributeName="opacity" values="0;0;1;0;0" dur="13s" repeatCount="indefinite"/></g>
+    <text x="44" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#94A3B8">Agentic workflows for the repetitive part, human judgement for the</text>
+    <text x="44" y="189" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#94A3B8">decisions that cost money later.</text>
+  </g>
+  <g>
+    <g opacity="0"><rect x="6" y="210" width="628" height="58" rx="8" fill="url(#rowHi)"/><animate attributeName="opacity" values="0;0;0;1;0" dur="13s" repeatCount="indefinite"/></g>
+    <rect x="14" y="213" width="2.5" height="48" rx="1.25" fill="#6FE3FF" opacity="0.35"/>
+    <g opacity="0"><rect x="14" y="213" width="2.5" height="48" rx="1.25" fill="#C9F3FF"/><animate attributeName="opacity" values="0;0;0;1;0" dur="13s" repeatCount="indefinite"/></g>
+    <text x="26" y="225" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="8" letter-spacing="1.4" fill="#334155">04</text>
+    <text x="44" y="225" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="0.4" fill="#6FE3FF">Detail is not decoration.</text>
+    <g opacity="0"><text x="44" y="225" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" letter-spacing="0.4" fill="#C9F3FF">Detail is not decoration.</text><animate attributeName="opacity" values="0;0;0;1;0" dur="13s" repeatCount="indefinite"/></g>
+    <text x="44" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#94A3B8">The same care that goes into an API contract goes into a keyboard&#x27;s switch</text>
+    <text x="44" y="255" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#94A3B8">feel and a README&#x27;s spacing.</text>
+  </g>
+</svg>

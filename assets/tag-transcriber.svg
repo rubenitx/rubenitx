@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141 24" width="141" height="24" role="img" aria-label="live and web app">
+  <rect x="0.0" y="1" width="62.6" height="22" rx="11" fill="#0B1120" stroke="#12352B"/>
+  <circle cx="13.0" cy="12" r="3" fill="#00D492"><animate attributeName="opacity" values="1;0.25;1" dur="2.2s" repeatCount="indefinite"/></circle>
+  <text x="25.0" y="15.8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.0" letter-spacing="1.5" fill="#00D492">LIVE</text>
+  <rect x="70.6" y="1" width="70.3" height="22" rx="11" fill="#0B1120" stroke="#3B2A55"/>
+  <text x="82.6" y="15.8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.0" letter-spacing="1.5" fill="#C77DFF">WEB APP</text>
+</svg>
