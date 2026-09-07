@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 24" width="162" height="24" role="img" aria-label="private and product">
+  <rect x="0.0" y="1" width="83.3" height="22" rx="11" fill="#0B1120" stroke="#243349"/>
+  <circle cx="13.0" cy="12" r="3" fill="#94A3B8"><animate attributeName="opacity" values="1;0.25;1" dur="2.2s" repeatCount="indefinite"/></circle>
+  <text x="25.0" y="15.8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.0" letter-spacing="1.5" fill="#94A3B8">PRIVATE</text>
+  <rect x="91.3" y="1" width="70.3" height="22" rx="11" fill="#0B1120" stroke="#12352B"/>
+  <text x="103.3" y="15.8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.0" letter-spacing="1.5" fill="#5EE9B5">PRODUCT</text>
+</svg>

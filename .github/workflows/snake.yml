@@ -1,0 +1,38 @@
+# Renders the contribution graph as a snake animation into the "output" branch.
+# The README reads it from raw.githubusercontent.com/<user>/<repo>/output/snake.svg
+#
+# Dot ramp follows the profile spectrum: empty -> blue -> purple -> green,
+# the same three accents used by the header, the dividers and the project covers.
+
+name: Generate snake
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate snake animation
+        uses: Platane/snk@v3
+        id: snake-gif
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?palette=github-dark&color_snake=#EAF9FF&color_dots=#0B1120,#1B3550,#5B9BFF,#C77DFF,#5EE9B5
+            dist/snake-light.svg?palette=github-light&color_snake=#0F172A&color_dots=#EBEDF0,#BFD4FF,#5B9BFF,#B14AED,#00BC7D
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

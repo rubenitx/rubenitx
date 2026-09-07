@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280" role="img" aria-label="YouTube Transcriber — captions pipeline from yt-dlp to DeepL with whisper.cpp fallback">
+  <defs>
+    <linearGradient id="tAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B9BFF"/>
+      <stop offset="45%" stop-color="#B14AED"/>
+      <stop offset="100%" stop-color="#C77DFF"/>
+    </linearGradient>
+    <linearGradient id="tSweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B9BFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#5B9BFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#5B9BFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tWave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B9BFF" stop-opacity="0.15"/>
+      <stop offset="45%" stop-color="#6FE3FF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#B14AED" stop-opacity="0.25"/>
+    </linearGradient>
+    <radialGradient id="tGlowA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B14AED" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#B14AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tGlowB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5B9BFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#5B9BFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="tGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0 L0 0 0 24" fill="none" stroke="#0E1B2E" stroke-width="1"/>
+    </pattern>
+    <clipPath id="tCard"><rect x="0" y="0" width="720" height="280" rx="14"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#tCard)">
+    <rect width="720" height="280" fill="#030712"/>
+    <rect width="720" height="280" fill="url(#tGrid)"/>
+    <ellipse cx="90" cy="40" rx="260" ry="140" fill="url(#tGlowA)"/>
+    <ellipse cx="650" cy="250" rx="260" ry="150" fill="url(#tGlowB)"/>
+
+    <rect x="-300" y="0" width="300" height="280" fill="url(#tSweep)">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 1040 0" dur="8s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- eyebrow -->
+    <text x="28" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" letter-spacing="2.6" fill="#C77DFF" opacity="0.9">CAPTIONS PIPELINE</text>
+    <circle cx="692" cy="30" r="3.4" fill="#00D492">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="682" y="34" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" letter-spacing="1.6" fill="#94A3B8">LIVE</text>
+
+    <!-- pipeline rail -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" letter-spacing="1.2">
+      <line x1="150" y1="76" x2="196" y2="76" stroke="#1E293B" stroke-width="1.4"/>
+      <line x1="300" y1="76" x2="346" y2="76" stroke="#1E293B" stroke-width="1.4"/>
+      <line x1="452" y1="76" x2="498" y2="76" stroke="#1E293B" stroke-width="1.4"/>
+
+      <rect x="28" y="62" width="122" height="28" rx="7" fill="#0B1120" stroke="#1E293B"/>
+      <circle cx="44" cy="76" r="2.6" fill="#5B9BFF"/>
+      <text x="56" y="80" fill="#CBD5E1">YT-DLP</text>
+
+      <rect x="196" y="62" width="104" height="28" rx="7" fill="#0B1120" stroke="#2B3B55"/>
+      <circle cx="212" cy="76" r="2.6" fill="#6FE3FF"/>
+      <text x="224" y="80" fill="#CBD5E1">CAPTIONS</text>
+
+      <rect x="346" y="62" width="106" height="28" rx="7" fill="#0B1120" stroke="#1E293B"/>
+      <circle cx="362" cy="76" r="2.6" fill="#5B9BFF"/>
+      <text x="374" y="80" fill="#CBD5E1">SENTENCES</text>
+
+      <rect x="498" y="62" width="86" height="28" rx="7" fill="#0B1120" stroke="#1E293B"/>
+      <circle cx="514" cy="76" r="2.6" fill="#B14AED"/>
+      <text x="526" y="80" fill="#CBD5E1">DEEPL</text>
+
+      <!-- fallback branch -->
+      <path d="M248 90 L248 125 L286 125" fill="none" stroke="#3B2A55" stroke-width="1.4" stroke-dasharray="3 3"/>
+      <text x="242" y="113" text-anchor="end" font-size="8" letter-spacing="1.4" fill="#7C6A9C">NO CAPTIONS</text>
+      <rect x="286" y="112" width="124" height="26" rx="7" fill="#0B1120" stroke="#3B2A55"/>
+      <circle cx="301" cy="125" r="2.4" fill="#B14AED"/>
+      <text x="312" y="129" font-size="10" fill="#B9A6D6">WHISPER.CPP</text>
+      <path d="M410 125 L432 125 L432 90" fill="none" stroke="#3B2A55" stroke-width="1.4" stroke-dasharray="3 3"/>
+    </g>
+
+    <!-- travelling packet -->
+    <circle r="3" fill="#6FE3FF">
+      <animateMotion dur="4.2s" repeatCount="indefinite" path="M28 76 L584 76"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- waveform -> transcript divider -->
+    <path d="M28 152 Q 60 140 92 152 T 156 152 T 220 152 T 284 152 T 348 152 T 412 152 T 476 152 T 540 152 T 604 152 T 668 152"
+          fill="none" stroke="url(#tWave)" stroke-width="1.6" stroke-linecap="round">
+      <animate attributeName="d"
+        values="M28 152 Q 60 140 92 152 T 156 152 T 220 152 T 284 152 T 348 152 T 412 152 T 476 152 T 540 152 T 604 152 T 668 152;
+                M28 152 Q 60 164 92 152 T 156 152 T 220 152 T 284 152 T 348 152 T 412 152 T 476 152 T 540 152 T 604 152 T 668 152;
+                M28 152 Q 60 140 92 152 T 156 152 T 220 152 T 284 152 T 348 152 T 412 152 T 476 152 T 540 152 T 604 152 T 668 152"
+        dur="5s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- transcript rows -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">
+      <text x="28" y="190" font-size="10" fill="#5B9BFF">00:08</text>
+      <rect x="76" y="182" width="196" height="7" rx="3.5" fill="#1E293B"/>
+      <rect x="76" y="182" width="196" height="7" rx="3.5" fill="#5B9BFF" opacity="0.55"/>
+      <rect x="282" y="182" width="104" height="7" rx="3.5" fill="#141E33"/>
+
+      <g>
+        <rect x="20" y="204" width="600" height="24" rx="6" fill="#5B9BFF" opacity="0.10"/>
+        <rect x="20" y="204" width="2.5" height="24" rx="1.2" fill="#6FE3FF"/>
+        <text x="28" y="220" font-size="10" fill="#6FE3FF">00:21</text>
+        <rect x="76" y="212" width="150" height="7" rx="3.5" fill="#6FE3FF" opacity="0.85"/>
+        <rect x="236" y="212" width="118" height="7" rx="3.5" fill="#B14AED" opacity="0.5"/>
+        <rect x="364" y="212" width="72" height="7" rx="3.5" fill="#243349"/>
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.6s" repeatCount="indefinite"/>
+      </g>
+
+      <text x="28" y="250" font-size="10" fill="#475569">00:29</text>
+      <rect x="76" y="242" width="168" height="7" rx="3.5" fill="#1A2437"/>
+      <rect x="254" y="242" width="126" height="7" rx="3.5" fill="#141E33"/>
+    </g>
+
+    <!-- EN -> ES marker -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="1.8">
+      <rect x="556" y="180" width="136" height="70" rx="8" fill="#0B1120" stroke="#1E293B"/>
+      <text x="572" y="202" fill="#94A3B8">EN</text>
+      <text x="600" y="202" fill="#B14AED">→</text>
+      <text x="620" y="202" fill="#94A3B8">ES</text>
+      <rect x="572" y="214" width="104" height="5" rx="2.5" fill="#1E293B"/>
+      <rect x="572" y="214" width="70" height="5" rx="2.5" fill="url(#tAccent)">
+        <animate attributeName="width" values="18;104;18" dur="6s" repeatCount="indefinite"/>
+      </rect>
+      <text x="572" y="238" font-size="8" letter-spacing="1.2" fill="#475569">DUAL OUTPUT</text>
+    </g>
+
+    <rect x="0" y="277" width="720" height="3" fill="url(#tAccent)" opacity="0.9"/>
+  </g>
+</svg>
