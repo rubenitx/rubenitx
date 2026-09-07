@@ -5,6 +5,7 @@
     bg #030712 · surface #0B1120 · border #1E293B
     primary #0A84FF · accent #00E5FF / #00D9FF · muted #94A3B8
   Custom assets: assets/header.svg · assets/divider.svg · assets/footer.svg
+  Project covers: assets/cover-{transcriber,financecore,sars,portfolio}.svg
   ─────────────────────────────────────────────────────────────
 -->
 
@@ -97,8 +98,11 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/-live-00E5FF?style=flat-square&labelColor=030712" alt="Live" />
-      <img src="https://img.shields.io/badge/-web%20app-1E293B?style=flat-square&labelColor=030712" alt="Web app" />
+      <a href="https://yt.rubenitx.me/"><img src="assets/cover-transcriber.svg" width="100%" alt="YouTubeTranscriber — captions pipeline" /></a>
+      <p>
+        <img src="https://img.shields.io/badge/-live-00E5FF?style=flat-square&labelColor=030712" alt="Live" />
+        <img src="https://img.shields.io/badge/-web%20app-1E293B?style=flat-square&labelColor=030712" alt="Web app" />
+      </p>
       <h3>YouTubeTranscriber</h3>
       <p>Turns a public YouTube video into timestamped text you can read, translate and reuse. Captions pipeline with <code>yt-dlp</code>, <code>whisper.cpp</code> fallback for videos without subtitles, and DeepL for dual-language output. No account required.</p>
       <p>
@@ -110,23 +114,29 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
       <p><a href="https://yt.rubenitx.me/"><b>Open app&nbsp;↗</b></a> · <a href="https://rubenitx.me/work/youtube-transcriber/">Read the case</a></p>
     </td>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/-private-64748B?style=flat-square&labelColor=030712" alt="Private" />
-      <img src="https://img.shields.io/badge/-product-1E293B?style=flat-square&labelColor=030712" alt="Product" />
+      <a href="https://rubenitx.me/work/finance-core/"><img src="assets/cover-financecore.svg" width="100%" alt="FinanceCore — decoupled financial engine and client layer" /></a>
+      <p>
+        <img src="https://img.shields.io/badge/-private-64748B?style=flat-square&labelColor=030712" alt="Private" />
+        <img src="https://img.shields.io/badge/-product-1E293B?style=flat-square&labelColor=030712" alt="Product" />
+      </p>
       <h3>FinanceCore</h3>
       <p>One workspace for accounts, spending, savings goals and crypto holdings. Decoupled architecture — financial engine and client layer evolve independently — with clean domain boundaries, observability and long-term maintainability as first-class concerns.</p>
       <p>
-        <img src="https://img.shields.io/badge/Spring%20Boot-030712?style=flat-square&logo=springboot&logoColor=6DB33F" alt="Spring Boot" />
         <img src="https://img.shields.io/badge/React-030712?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
-        <img src="https://img.shields.io/badge/Docker-030712?style=flat-square&logo=docker&logoColor=2496ED" alt="Docker" />
-        <img src="https://img.shields.io/badge/Grafana-030712?style=flat-square&logo=grafana&logoColor=F46800" alt="Grafana" />
+        <img src="https://img.shields.io/badge/TypeScript-030712?style=flat-square&logo=typescript&logoColor=3178C6" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/FastAPI-030712?style=flat-square&logo=fastapi&logoColor=009688" alt="FastAPI" />
+        <img src="https://img.shields.io/badge/PostgreSQL-030712?style=flat-square&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
       </p>
       <p><a href="https://rubenitx.me/work/finance-core/"><b>Read the case&nbsp;↗</b></a> · <i>private code, synthetic-data walkthrough</i></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/-live-00E5FF?style=flat-square&labelColor=030712" alt="Live" />
-      <img src="https://img.shields.io/badge/-research-1E293B?style=flat-square&labelColor=030712" alt="Research" />
+      <a href="http://sarscov2-mutation-portal.urv.cat"><img src="assets/cover-sars.svg" width="100%" alt="SARS-CoV-2 mutation portal — mutations across the viral genome" /></a>
+      <p>
+        <img src="https://img.shields.io/badge/-live-00E5FF?style=flat-square&labelColor=030712" alt="Live" />
+        <img src="https://img.shields.io/badge/-research-1E293B?style=flat-square&labelColor=030712" alt="Research" />
+      </p>
       <h3>The Mutational Landscape of SARS-CoV-2</h3>
       <p>Interactive portal for exploring mutations across the SARS-CoV-2 genome, built end to end with <b>Universitat Rovira i Virgili</b> — from design to production. Interdisciplinary work at the intersection of software engineering and bioinformatics, with results published in <i>IJMS</i>.</p>
       <p>
@@ -138,8 +148,11 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
       <p><a href="http://sarscov2-mutation-portal.urv.cat"><b>Open portal&nbsp;↗</b></a> · <a href="https://www.mdpi.com/1422-0067/24/10/9072">Publication</a></p>
     </td>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/-live-00E5FF?style=flat-square&labelColor=030712" alt="Live" />
-      <img src="https://img.shields.io/badge/-open%20source-1E293B?style=flat-square&labelColor=030712" alt="Open source" />
+      <a href="https://rubenitx.me"><img src="assets/cover-portfolio.svg" width="100%" alt="rubenitx.me — static bilingual portfolio with a hidden Godspeed mini-game" /></a>
+      <p>
+        <img src="https://img.shields.io/badge/-live-00E5FF?style=flat-square&labelColor=030712" alt="Live" />
+        <img src="https://img.shields.io/badge/-open%20source-1E293B?style=flat-square&labelColor=030712" alt="Open source" />
+      </p>
       <h3>rubenitx.me</h3>
       <p>Personal site and CV: static output, bilingual EN/ES, printer-ready résumé route and interactive case studies. And a Killua <i>Godspeed</i> mini-game hidden behind the header — three levels, section orbs and an electric aura. Because a portfolio should also be fun to break.</p>
       <p>
