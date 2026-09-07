@@ -155,24 +155,19 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
 ## `03` &nbsp;//&nbsp; Telemetry
 
 <p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&duration=3400&pause=900&color=00D9FF&center=true&vCenter=true&width=720&height=44&lines=Backend+that+outlives+its+sprint;Domain+boundaries+before+frameworks;AI+to+code+faster%E2%80%94not+to+think+less" alt="Backend that outlives its sprint · Domain boundaries before frameworks · AI to code faster, not to think less" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=rubenmtzb&background=030712&border=1E293B&stroke=1E293B&ring=00D9FF&fire=0A84FF&currStreakLabel=00D9FF&sideLabels=94A3B8&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=64748B&border_radius=10" alt="Contribution streak" height="170" />
+</p>
+
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rubenmtzb/rubenmtzb/output/snake.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rubenmtzb/rubenmtzb/output/snake-light.svg" />
-    <img src="https://raw.githubusercontent.com/rubenmtzb/rubenmtzb/output/snake.svg" alt="Contribution snake" width="100%" />
+    <img src="https://raw.githubusercontent.com/rubenmtzb/rubenmtzb/output/snake.svg" alt="Contribution snake" height="180" />
   </picture>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=rubenmtzb&show_icons=true&include_all_commits=true&rank_icon=github&bg_color=030712&border_color=1E293B&title_color=00D9FF&text_color=94A3B8&icon_color=0A84FF&border_radius=10" alt="GitHub stats" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rubenmtzb&layout=compact&langs_count=8&bg_color=030712&border_color=1E293B&title_color=00D9FF&text_color=94A3B8&border_radius=10" alt="Top languages" height="170" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=rubenmtzb&background=030712&border=1E293B&stroke=1E293B&ring=00D9FF&fire=0A84FF&currStreakLabel=00D9FF&sideLabels=94A3B8&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=64748B&border_radius=10" alt="Streak" height="170" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=rubenmtzb&custom_title=Contribution%20activity&bg_color=030712&color=00D9FF&line=0A84FF&point=FFFFFF&area=true&area_color=0A84FF&title_color=00D9FF&hide_border=false&border_color=1E293B&radius=10" alt="Activity graph" width="100%" />
 </p>
 
 <img src="assets/divider.svg" width="100%" alt="" />
@@ -273,5 +268,5 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=rubenitx&label=views&color=00D9FF&style=flat-square" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=rubenmtzb&label=views&color=00D9FF&style=flat-square" alt="Profile views" />
 </p>
