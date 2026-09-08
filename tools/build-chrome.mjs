@@ -227,37 +227,95 @@ ${spectrum(1, W, PAD, W - PAD)}
 writeFileSync('assets/chrome/footer.svg', footer);
 console.log(`  footer.svg  ${W}x${FH}  ${Buffer.byteLength(footer)} B`);
 
-/* ── divider ───────────────────────────────────────────────────────────────
- * This file is placed seven times, more than anything else on the page, so its
- * behaviour sets the page's tone more than any single panel does.
+/* ── dividers ──────────────────────────────────────────────────────────────
+ * Seven rules, one per section break, and deliberately seven files rather than
+ * one placed seven times.
  *
- * It used to carry a dot that crossed the line every 8s. Seven <img> instances
- * of one file all start their SMIL clock together, so those seven dots sat at
- * the same x on every scroll — a column of markers ticking in unison, which
- * reads as a progress bar rather than as design.
+ * The single shared file was the whole problem: seven <img> instances start
+ * their SMIL clock together, so the marker that crossed each line sat at the
+ * same x on all of them at once — a column of dots marching in step, which
+ * reads as a progress bar. Variety is the actual fix, so each rule now differs
+ * by construction and no two can ever line up.
  *
- * Replacing the dot with the map's drifting spectrum removes the discrete
- * object entirely: a continuous colour field has no marker whose phase you can
- * catch, so the shared clock stops being visible and instead the same palette
- * flows through the header map and all seven rules as one system. It is also
- * strictly less machinery — 4 gradients and 4 animations become 1 and 1.
+ * The difference follows one idea instead of seven decorations. A node travels
+ * through the document: it advances left to right as you descend, and it loses
+ * an edge at every step, so it starts as a triangle at the top and has resolved
+ * into a circle by the contact section. Each spins at its own rate and its own
+ * direction, which means the seven never return to a common phase.
+ *
+ * The node is filled with the same drifting gradient as the line, so its colour
+ * is always whatever the wave is carrying at its position — the node and the
+ * rule can never disagree.
  */
 const BRIGHT = { blue: '#0A84FF', purple: '#B14AED', green: '#00D492' };
-const DW = 1000, DH = 14, DVEC = [780, 0];
+const DW = 1000, DH = 22, DVEC = [780, 0];
+const CY = DH / 2;
 
-const divider = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${DW} ${DH}" width="${DW}" height="${DH}" role="img" aria-label="">
+/**
+ * Regular n-gon, point-up, built at absolute coordinates. n = 0 draws a circle.
+ *
+ * The points are absolute on purpose. userSpaceOnUse gradient coordinates travel
+ * with any transform on the filled element, so a node wrapped in translate()
+ * samples url(#${gid}Drift) at its own local origin — which is the same point for all
+ * seven, and they all come out one flat colour. Placed absolutely and spun about
+ * their own centre, each node instead reads the wave where it actually stands.
+ */
+function nodeShape(n, r, cx, cy) {
+  if (n === -1) return `<circle cx="${cx}" cy="${cy}" r="${r2(r * 0.82)}" fill="none" stroke-width="2.2"/>`;
+  if (!n) return `<circle cx="${cx}" cy="${cy}" r="${r}"/>`;
+  // A triangle inscribed in r covers 41% of the area a circle does, so few-sided
+  // shapes read lighter than many-sided ones at the same radius. Nudge the small
+  // ones up so the seven nodes carry equal optical weight down the page.
+  r *= 1 + Math.max(0, 6 - n) * 0.075;
+  const pts = Array.from({ length: n }, (_, k) => {
+    const a = (2 * Math.PI * k) / n - Math.PI / 2;
+    return `${r2(cx + Math.cos(a) * r)},${r2(cy + Math.sin(a) * r)}`;
+  });
+  return `<polygon points="${pts.join(' ')}"/>`;
+}
+
+const SIDES = [3, 4, 5, 6, 8, -1, 0];   // angular, then it opens to a ring and settles solid
+const SPINS = [19, 23, 17, 27, 21, 29, 25];
+
+function makeDivider(i, total) {
+  // Each divider is its own document as an <img>, so ids cannot clash there. Suffix
+  // them anyway: inlined side by side (a preview page, a docs site) a shared
+  // id="${gid}Mask" would let the first divider's gap punch every other line.
+  const gid = `d${i}`;
+  const t = total === 1 ? 0.5 : i / (total - 1);
+  const x = r2(DW * (0.13 + t * 0.74));
+  const r = 4.6, dir = i % 2 ? -1 : 1, spin = SPINS[i % SPINS.length];
+  const shape = nodeShape(SIDES[i % SIDES.length], r, x, CY);
+  const sides = SIDES[i % SIDES.length];
+  const spinner = sides > 0
+    ? `<animateTransform attributeName="transform" type="rotate" ` +
+      `values="0 ${x} ${CY};${360 * dir} ${x} ${CY}" dur="${spin}s" repeatCount="indefinite"/>`
+    : `<animate attributeName="r" values="${r2(sides === -1 ? r * 0.82 : r)};${r2((sides === -1 ? r * 0.82 : r) * 0.76)};${r2(sides === -1 ? r * 0.82 : r)}" dur="${r2(spin / 3)}s" repeatCount="indefinite"/>`;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${DW} ${DH}" width="${DW}" height="${DH}" role="img" aria-label="">
   <defs>
-    ${driftGradient({ id: 'dDrift', stops: ramp(BRIGHT), vec: DVEC, dur: 30 })}
-    <linearGradient id="dFade" x1="0" y1="0" x2="1" y2="0">
+    ${driftGradient({ id: `${gid}Drift`, stops: ramp(BRIGHT), vec: DVEC, dur: 30 })}
+    <linearGradient id="${gid}Fade" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#fff" stop-opacity="0"/>
       <stop offset="0.2" stop-color="#fff" stop-opacity="0.72"/>
       <stop offset="0.8" stop-color="#fff" stop-opacity="0.72"/>
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
-    <mask id="dMask"><rect x="0" y="0" width="${DW}" height="${DH}" fill="url(#dFade)"/></mask>
+    <mask id="${gid}Mask">
+      <rect width="${DW}" height="${DH}" fill="url(#${gid}Fade)"/>
+      <circle cx="${x}" cy="${CY}" r="${r + 2.8}" fill="#000"/>
+    </mask>
   </defs>
-  <rect x="0" y="${DH / 2 - 0.75}" width="${DW}" height="1.5" fill="url(#dDrift)" mask="url(#dMask)"/>
+  <rect x="0" y="${CY - 0.75}" width="${DW}" height="1.5" fill="url(#${gid}Drift)" mask="url(#${gid}Mask)"/>
+  <circle cx="${x}" cy="${CY}" r="9" fill="url(#${gid}Drift)" opacity="0.14"/>
+  <g fill="url(#${gid}Drift)" stroke="url(#${gid}Drift)">${shape.replace('/>', '>')}${spinner}</${sides > 0 ? 'polygon' : 'circle'}></g>
 </svg>
 `;
-writeFileSync('assets/chrome/divider.svg', divider);
-console.log(`  divider.svg ${DW}x${DH}  ${Buffer.byteLength(divider)} B`);
+}
+
+const N_DIV = 7;
+for (let i = 0; i < N_DIV; i++) {
+  const svg = makeDivider(i, N_DIV);
+  writeFileSync(`assets/chrome/divider-${i}.svg`, svg);
+  console.log(`  divider-${i}.svg  ${SIDES[i] || 'circle'} sides  x=${r2(DW * (0.13 + (i / (N_DIV - 1)) * 0.74))}  ${Buffer.byteLength(svg)} B`);
+}

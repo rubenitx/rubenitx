@@ -28,7 +28,7 @@
   <a href="https://orcid.org/0009-0005-5467-8436"><img src="assets/badges/link-orcid.svg" height="36" alt="ORCID" /></a>
 </p>
 
-<img src="assets/chrome/divider.svg" width="100%" alt="" />
+<img src="assets/chrome/divider-0.svg" width="100%" alt="" />
 
 ## `00` &nbsp;//&nbsp; Identity
 
@@ -47,7 +47,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
 }
 ```
 
-<img src="assets/chrome/divider.svg" width="100%" alt="" />
+<img src="assets/chrome/divider-1.svg" width="100%" alt="" />
 
 ## `01` &nbsp;//&nbsp; Selected work
 
@@ -90,7 +90,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
   </tr>
 </table>
 
-<img src="assets/chrome/divider.svg" width="100%" alt="" />
+<img src="assets/chrome/divider-2.svg" width="100%" alt="" />
 
 ## `02` &nbsp;//&nbsp; Stack
 
@@ -98,7 +98,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
   <img src="assets/badges/stack.svg" width="100%" alt="Backend: Java, Spring Boot, Spring Batch, REST APIs, Liferay, Python, PHP. Frontend: React, TypeScript, JavaScript, Astro, Tailwind CSS, Vite, D3.js. Data: MySQL, PostgreSQL, MongoDB. Ops: Docker, Kubernetes, Jenkins, Terraform, GitHub Actions, NGINX, Grafana, Linux." />
 </p>
 
-<img src="assets/chrome/divider.svg" width="100%" alt="" />
+<img src="assets/chrome/divider-3.svg" width="100%" alt="" />
 
 ## `03` &nbsp;//&nbsp; Activity
 
@@ -112,7 +112,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
 
 <p align="center"><sub>Regenerated every 12 hours by <a href="https://github.com/rubenmtzb/rubenmtzb/actions">GitHub Actions</a>, in the profile's own palette.</sub></p>
 
-<img src="assets/chrome/divider.svg" width="100%" alt="" />
+<img src="assets/chrome/divider-4.svg" width="100%" alt="" />
 
 ## `04` &nbsp;//&nbsp; Working principles
 
@@ -131,7 +131,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
   </tr>
 </table>
 
-<img src="assets/chrome/divider.svg" width="100%" alt="" />
+<img src="assets/chrome/divider-5.svg" width="100%" alt="" />
 
 ## `05` &nbsp;//&nbsp; Outside the code
 
@@ -187,7 +187,7 @@ Clean domain boundaries, pragmatic decisions and systems that age well.
   </tr>
 </table>
 
-<img src="assets/chrome/divider.svg" width="100%" alt="" />
+<img src="assets/chrome/divider-6.svg" width="100%" alt="" />
 
 ## `06` &nbsp;//&nbsp; Contact
 
