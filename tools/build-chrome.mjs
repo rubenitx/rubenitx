@@ -79,17 +79,18 @@ function isLand(lon, lat) {
  * interpolating through the muddy midpoint RGB gives for purple->green.
  */
 const PERIOD = [430, 155];      // gradient vector, and the exact translate distance
-const driftGradient = (dur = 34) =>
-  `<linearGradient id="drift" gradientUnits="userSpaceOnUse" spreadMethod="repeat" ` +
-  `x1="0" y1="0" x2="${PERIOD[0]}" y2="${PERIOD[1]}">` +
-  `<stop offset="0" stop-color="${DRIFT.green}"/>` +
-  `<stop offset="0.26" stop-color="${DRIFT.blue}"/>` +
-  `<stop offset="0.55" stop-color="${DRIFT.purple}"/>` +
-  `<stop offset="0.78" stop-color="${DRIFT.blue}"/>` +
-  `<stop offset="1" stop-color="${DRIFT.green}"/>` +
+const driftGradient = ({ id = 'drift', stops, vec = PERIOD, dur = 34 }) =>
+  `<linearGradient id="${id}" gradientUnits="userSpaceOnUse" spreadMethod="repeat" ` +
+  `x1="0" y1="0" x2="${vec[0]}" y2="${vec[1]}">` +
+  stops.map(([o, c, a]) => `<stop offset="${o}" stop-color="${c}"${a === undefined ? '' : ` stop-opacity="${a}"`}/>`).join('') +
   `<animateTransform attributeName="gradientTransform" type="translate" ` +
-  `values="0 0;${PERIOD[0]} ${PERIOD[1]}" dur="${dur}s" repeatCount="indefinite"/>` +
+  `values="0 0;${vec[0]} ${vec[1]}" dur="${dur}s" repeatCount="indefinite"/>` +
   `</linearGradient>`;
+
+/* Ramp shared by the map and the dividers: it starts and ends on the same green
+   and returns through blue between purple and green, so no transition crosses
+   the muddy midpoint RGB interpolation gives that pair. */
+const ramp = (c) => [[0, c.green], [0.26, c.blue], [0.55, c.purple], [0.78, c.blue], [1, c.green]];
 
 /**
  * Sample the landmask onto a dot grid, dissolving westward so it clears the
@@ -195,7 +196,7 @@ const spectrum = (y, w, from, to) =>
 const name = nameCycle({ x: PAD, y: 132, lead: "Hi, I'm ", a: 'rubén.', b: 'rubenitx.', size: 40 });
 
 const header = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Rubén Martínez Bernabe — Software Engineer, Barcelona, Spain. Available for opportunities.">
-  <defs>${driftGradient()}</defs>
+  <defs>${driftGradient({ stops: ramp(DRIFT) })}</defs>
   <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="16" fill="${T.bg}" stroke="${T.edge}"/>
   <g>${worldMap({ x: 468, y: 30, w: 504, h: 182 })}</g>
 ${pill(PAD, 44, 'AVAILABLE FOR OPPORTUNITIES')}
@@ -225,3 +226,38 @@ ${spectrum(1, W, PAD, W - PAD)}
 `;
 writeFileSync('assets/chrome/footer.svg', footer);
 console.log(`  footer.svg  ${W}x${FH}  ${Buffer.byteLength(footer)} B`);
+
+/* ── divider ───────────────────────────────────────────────────────────────
+ * This file is placed seven times, more than anything else on the page, so its
+ * behaviour sets the page's tone more than any single panel does.
+ *
+ * It used to carry a dot that crossed the line every 8s. Seven <img> instances
+ * of one file all start their SMIL clock together, so those seven dots sat at
+ * the same x on every scroll — a column of markers ticking in unison, which
+ * reads as a progress bar rather than as design.
+ *
+ * Replacing the dot with the map's drifting spectrum removes the discrete
+ * object entirely: a continuous colour field has no marker whose phase you can
+ * catch, so the shared clock stops being visible and instead the same palette
+ * flows through the header map and all seven rules as one system. It is also
+ * strictly less machinery — 4 gradients and 4 animations become 1 and 1.
+ */
+const BRIGHT = { blue: '#0A84FF', purple: '#B14AED', green: '#00D492' };
+const DW = 1000, DH = 14, DVEC = [780, 0];
+
+const divider = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${DW} ${DH}" width="${DW}" height="${DH}" role="img" aria-label="">
+  <defs>
+    ${driftGradient({ id: 'dDrift', stops: ramp(BRIGHT), vec: DVEC, dur: 30 })}
+    <linearGradient id="dFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.2" stop-color="#fff" stop-opacity="0.72"/>
+      <stop offset="0.8" stop-color="#fff" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="dMask"><rect x="0" y="0" width="${DW}" height="${DH}" fill="url(#dFade)"/></mask>
+  </defs>
+  <rect x="0" y="${DH / 2 - 0.75}" width="${DW}" height="1.5" fill="url(#dDrift)" mask="url(#dMask)"/>
+</svg>
+`;
+writeFileSync('assets/chrome/divider.svg', divider);
+console.log(`  divider.svg ${DW}x${DH}  ${Buffer.byteLength(divider)} B`);
