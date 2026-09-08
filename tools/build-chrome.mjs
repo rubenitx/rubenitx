@@ -120,8 +120,12 @@ function worldMap({ x, y, w, h, cols = 60, max = 0.55 }) {
     }
   }
   const groups = buckets.map((b, i) => b.length
-    ? `<g fill="url(#drift)" opacity="${r2(max * ((i + 0.62) / LEVELS))}">${b.join('')}</g>` : '').join('');
-  return `<g>${groups.replace(/<circle /g, '<circle r="1.35" ')}${bcn}</g>`;
+    ? `<g fill="#fff" opacity="${r2(max * ((i + 0.62) / LEVELS))}">${b.join('')}</g>` : '').join('')
+    .replace(/<circle /g, '<circle r="1.35" ');
+  return {
+    defs: `<mask id="mapMask" maskContentUnits="userSpaceOnUse">${groups}</mask>`,
+    body: `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#drift)" mask="url(#mapMask)"/>${bcn}`,
+  };
 }
 
 /* ── name cycle ────────────────────────────────────────────────────────────
@@ -193,12 +197,13 @@ const spectrum = (y, w, from, to) =>
     </linearGradient></defs>
   <rect x="${from}" y="${y}" width="${to - from}" height="1" fill="url(#spec)"/>`;
 
+const map = worldMap({ x: 468, y: 30, w: 504, h: 182 });
 const name = nameCycle({ x: PAD, y: 132, lead: "Hi, I'm ", a: 'rubén.', b: 'rubenitx.', size: 40 });
 
 const header = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Rubén Martínez Bernabe — Software Engineer, Barcelona, Spain. Available for opportunities.">
-  <defs>${driftGradient({ stops: ramp(DRIFT) })}</defs>
+  <defs>${driftGradient({ stops: ramp(DRIFT) })}${map.defs}</defs>
   <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="16" fill="${T.bg}" stroke="${T.edge}"/>
-  <g>${worldMap({ x: 468, y: 30, w: 504, h: 182 })}</g>
+  ${map.body}
 ${pill(PAD, 44, 'AVAILABLE FOR OPPORTUNITIES')}
 ${name.svg}
     <text x="${PAD}" y="168" font-family="${SANS}" font-size="16.5" fill="${T.role}">Software Engineer — Barcelona, Spain</text>
