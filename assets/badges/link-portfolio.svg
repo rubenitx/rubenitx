@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 36" width="128" height="36" role="img" aria-label="Portfolio">
+  <defs>
+    <linearGradient id="g-link-portfolio" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#0B1120"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="126" height="34" rx="17" fill="url(#g-link-portfolio)" stroke="#00D9FF" stroke-opacity="0.45"/>
+  <g transform="translate(16 10.5) scale(0.63)"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.3 6h-2.95a15.7 15.7 0 0 0-1.4-3.4A8.03 8.03 0 0 1 19.3 8ZM12 4.05c.66.96 1.2 2.06 1.56 3.95h-3.12C10.8 6.11 11.34 5.01 12 4.05ZM4.26 14A8.05 8.05 0 0 1 4 12c0-.69.1-1.36.26-2h3.4a16.6 16.6 0 0 0 0 4h-3.4Zm.44 2h2.95c.33 1.25.8 2.4 1.4 3.4A8.03 8.03 0 0 1 4.7 16Zm2.95-8H4.7a8.03 8.03 0 0 1 4.35-3.4A15.7 15.7 0 0 0 7.65 8ZM12 19.95c-.66-.96-1.2-2.06-1.56-3.95h3.12c-.36 1.89-.9 2.99-1.56 3.95ZM14.02 14H9.98a14.8 14.8 0 0 1 0-4h4.04a14.8 14.8 0 0 1 0 4Zm.93 5.4c.6-1 1.07-2.15 1.4-3.4h2.95a8.03 8.03 0 0 1-4.35 3.4ZM16.34 14a16.6 16.6 0 0 0 0-4h3.4c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.4Z" fill="#00D9FF"/></g>
+  <text x="40" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" letter-spacing="1.4" fill="#CBD5E1">PORTFOLIO</text>
+</svg>
