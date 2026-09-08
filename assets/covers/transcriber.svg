@@ -80,7 +80,9 @@
     <!-- travelling packet -->
     <circle r="3" fill="#6FE3FF">
       <animateMotion dur="4.2s" repeatCount="indefinite" path="M28 76 L584 76"/>
-      <animate attributeName="opacity" values="0;1;1;0" dur="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" dur="4.2s" repeatCount="indefinite"
+               keyTimes="0;0.219;0.229;0.292;0.302;0.489;0.499;0.562;0.572;0.763;0.773;0.835;0.845;1"
+               values="0;0;1;1;0;0;1;1;0;0;1;1;0;0"/>
     </circle>
 
     <!-- waveform -> transcript divider -->
