@@ -8,6 +8,9 @@
       <stop offset="100%" stop-color="#5B9BFF" stop-opacity="0"/>
     </linearGradient>
   </defs>
+  <!-- Opaque ground so the panel reads identically on GitHub's light and dark themes;
+       without it the light-on-transparent text washes out on a white page. -->
+  <rect x="0.5" y="0.5" width="639" height="299" rx="12" fill="#0B1120" stroke="#1E293B"/>
   <g>
     <g opacity="0"><rect x="6" y="12" width="628" height="58" rx="8" fill="url(#rowHi)"/><animate attributeName="opacity" values="1;0;0;0;1" dur="13s" repeatCount="indefinite"/></g>
     <rect x="14" y="15" width="2.5" height="48" rx="1.25" fill="#5B9BFF" opacity="0.35"/>
