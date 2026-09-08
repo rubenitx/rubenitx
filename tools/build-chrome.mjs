@@ -28,6 +28,9 @@ const T = {
 // The three project accents, kept only as a hairline so the header still
 // belongs to the same system as the covers, tags and dividers.
 const SPECTRUM = ['#0A84FF', '#B14AED', '#00D492'];
+/* The same three hues pulled down to the value the map dots already sit at, so the
+   drift reads as a change of tone and never as a change of brightness. */
+const DRIFT = { blue: '#1D4E7A', purple: '#4C2E7E', green: '#17614C' };
 
 const SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif";
 const MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace";
@@ -64,6 +67,31 @@ function isLand(lon, lat) {
 }
 
 /**
+ * A slow colour drift across the map, as one user-space gradient rather than an
+ * animation per dot. Every dot is filled with url(#drift), so each takes the
+ * colour at its own position and the wave travels as a single coherent front —
+ * one animation covering ~700 dots instead of 700 competing ones.
+ *
+ * spreadMethod="repeat" tiles the ramp, and translating by exactly the gradient
+ * vector advances it precisely one period, so the loop has no seam. The ramp
+ * starts and ends on the same green and passes back through blue between purple
+ * and green: that keeps every transition inside the palette instead of
+ * interpolating through the muddy midpoint RGB gives for purple->green.
+ */
+const PERIOD = [430, 155];      // gradient vector, and the exact translate distance
+const driftGradient = (dur = 34) =>
+  `<linearGradient id="drift" gradientUnits="userSpaceOnUse" spreadMethod="repeat" ` +
+  `x1="0" y1="0" x2="${PERIOD[0]}" y2="${PERIOD[1]}">` +
+  `<stop offset="0" stop-color="${DRIFT.green}"/>` +
+  `<stop offset="0.26" stop-color="${DRIFT.blue}"/>` +
+  `<stop offset="0.55" stop-color="${DRIFT.purple}"/>` +
+  `<stop offset="0.78" stop-color="${DRIFT.blue}"/>` +
+  `<stop offset="1" stop-color="${DRIFT.green}"/>` +
+  `<animateTransform attributeName="gradientTransform" type="translate" ` +
+  `values="0 0;${PERIOD[0]} ${PERIOD[1]}" dur="${dur}s" repeatCount="indefinite"/>` +
+  `</linearGradient>`;
+
+/**
  * Sample the landmask onto a dot grid, dissolving westward so it clears the
  * text column. Dots are bucketed into a few opacity levels and emitted as
  * groups: same picture, roughly half the bytes of per-dot opacity.
@@ -91,7 +119,7 @@ function worldMap({ x, y, w, h, cols = 60, max = 0.55 }) {
     }
   }
   const groups = buckets.map((b, i) => b.length
-    ? `<g fill="${T.dot}" opacity="${r2(max * ((i + 0.62) / LEVELS))}">${b.join('')}</g>` : '').join('');
+    ? `<g fill="url(#drift)" opacity="${r2(max * ((i + 0.62) / LEVELS))}">${b.join('')}</g>` : '').join('');
   return `<g>${groups.replace(/<circle /g, '<circle r="1.35" ')}${bcn}</g>`;
 }
 
@@ -167,6 +195,7 @@ const spectrum = (y, w, from, to) =>
 const name = nameCycle({ x: PAD, y: 132, lead: "Hi, I'm ", a: 'rubén.', b: 'rubenitx.', size: 40 });
 
 const header = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Rubén Martínez Bernabe — Software Engineer, Barcelona, Spain. Available for opportunities.">
+  <defs>${driftGradient()}</defs>
   <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="16" fill="${T.bg}" stroke="${T.edge}"/>
   <g>${worldMap({ x: 468, y: 30, w: 504, h: 182 })}</g>
 ${pill(PAD, 44, 'AVAILABLE FOR OPPORTUNITIES')}
