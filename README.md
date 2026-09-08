@@ -11,7 +11,9 @@
     assets/badges   stack sheet, per-project tech strips, link buttons
     assets/tags     status pills
     assets/media    claude.gif, soundtrack.png
-  Regenerate the badge sheets with:  node tools/build-badges.mjs
+  Regenerate generated assets with:
+    node tools/build-chrome.mjs   header + footer
+    node tools/build-badges.mjs   badge sheets, tech strips, link buttons
   ─────────────────────────────────────────────────────────────
 -->
 
