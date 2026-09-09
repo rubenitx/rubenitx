@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 22" width="1000" height="22" role="img" aria-label="">
+  <defs>
+    <linearGradient id="d6Drift" gradientUnits="userSpaceOnUse" spreadMethod="repeat" x1="0" y1="0" x2="780" y2="0"><stop offset="0" stop-color="#00D492"/><stop offset="0.26" stop-color="#0A84FF"/><stop offset="0.55" stop-color="#B14AED"/><stop offset="0.78" stop-color="#0A84FF"/><stop offset="1" stop-color="#00D492"/><animateTransform attributeName="gradientTransform" type="translate" values="0 0;780 0" dur="30s" repeatCount="indefinite"/></linearGradient>
+    <linearGradient id="d6Fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.2" stop-color="#fff" stop-opacity="0.72"/>
+      <stop offset="0.8" stop-color="#fff" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="d6Mask">
+      <rect width="1000" height="22" fill="url(#d6Fade)"/>
+      <circle cx="870" cy="11" r="7.3999999999999995" fill="#000"/>
+    </mask>
+  </defs>
+  <rect x="0" y="10.25" width="1000" height="1.5" fill="url(#d6Drift)" mask="url(#d6Mask)"/>
+  <circle cx="870" cy="11" r="9" fill="url(#d6Drift)" opacity="0.14"/>
+  <g fill="url(#d6Drift)" stroke="url(#d6Drift)"><circle cx="870" cy="11" r="4.6"><animate attributeName="r" values="4.6;3.5;4.6" dur="8.33s" repeatCount="indefinite"/></circle></g>
+</svg>

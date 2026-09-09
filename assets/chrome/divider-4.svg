@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 22" width="1000" height="22" role="img" aria-label="">
+  <defs>
+    <linearGradient id="d4Drift" gradientUnits="userSpaceOnUse" spreadMethod="repeat" x1="0" y1="0" x2="780" y2="0"><stop offset="0" stop-color="#00D492"/><stop offset="0.26" stop-color="#0A84FF"/><stop offset="0.55" stop-color="#B14AED"/><stop offset="0.78" stop-color="#0A84FF"/><stop offset="1" stop-color="#00D492"/><animateTransform attributeName="gradientTransform" type="translate" values="0 0;780 0" dur="30s" repeatCount="indefinite"/></linearGradient>
+    <linearGradient id="d4Fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.2" stop-color="#fff" stop-opacity="0.72"/>
+      <stop offset="0.8" stop-color="#fff" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="d4Mask">
+      <rect width="1000" height="22" fill="url(#d4Fade)"/>
+      <circle cx="623.33" cy="11" r="7.3999999999999995" fill="#000"/>
+    </mask>
+  </defs>
+  <rect x="0" y="10.25" width="1000" height="1.5" fill="url(#d4Drift)" mask="url(#d4Mask)"/>
+  <circle cx="623.33" cy="11" r="9" fill="url(#d4Drift)" opacity="0.14"/>
+  <g fill="url(#d4Drift)" stroke="url(#d4Drift)"><polygon points="623.33,6.4 626.58,7.75 627.93,11 626.58,14.25 623.33,15.6 620.08,14.25 618.73,11 620.08,7.75"><animateTransform attributeName="transform" type="rotate" values="0 623.33 11;360 623.33 11" dur="21s" repeatCount="indefinite"/></polygon></g>
+</svg>

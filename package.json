@@ -1,0 +1,11 @@
+{
+  "name": "rubenmtzb-profile",
+  "private": true,
+  "description": "Profile README for github.com/rubenmtzb — sources for the generated badge assets.",
+  "scripts": {
+    "build:badges": "node tools/build-badges.mjs"
+  },
+  "devDependencies": {
+    "simple-icons": "^16.30.0"
+  }
+}
