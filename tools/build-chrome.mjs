@@ -178,6 +178,15 @@ function nameCycle({ x, y, lead, a, b, size }) {
 /* ── header ────────────────────────────────────────────────────────────── */
 const W = 1000, H = 240, PAD = 68;
 
+/**
+ * The status line. Deliberately about side work rather than availability:
+ * "available for opportunities" on a public profile reads as job hunting to a
+ * current employer, which is a signal to send on purpose or not at all. This
+ * says what is actually true — there is always something being built outside
+ * work — and leaves the day job entirely out of it.
+ */
+const STATUS = 'BUILDING THINGS ON THE SIDE';
+
 const pill = (x, y, label) => {
   const w = 24 + label.length * (9.5 * 0.6 + 1.9) + 16;
   return `    <rect x="${x}" y="${y}" width="${r2(w)}" height="26" rx="13" fill="${T.chip}" stroke="${T.chipEd}"/>
@@ -200,11 +209,11 @@ const spectrum = (y, w, from, to) =>
 const map = worldMap({ x: 468, y: 30, w: 504, h: 182 });
 const name = nameCycle({ x: PAD, y: 132, lead: "Hi, I'm ", a: 'rubén.', b: 'rubenitx.', size: 40 });
 
-const header = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Rubén Martínez Bernabe — Software Engineer, Barcelona, Spain. Available for opportunities.">
+const header = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Rubén Martínez Bernabe — Software Engineer, Barcelona, Spain. Building things on the side.">
   <defs>${driftGradient({ stops: ramp(DRIFT) })}${map.defs}</defs>
   <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="16" fill="${T.bg}" stroke="${T.edge}"/>
   ${map.body}
-${pill(PAD, 44, 'AVAILABLE FOR OPPORTUNITIES')}
+${pill(PAD, 44, STATUS)}
 ${name.svg}
     <text x="${PAD}" y="168" font-family="${SANS}" font-size="16.5" fill="${T.role}">Software Engineer — Barcelona, Spain</text>
     <text x="${PAD}" y="195" font-family="${SANS}" font-size="13.5" fill="${T.desc}">I build APIs, connect services and turn manual workflows into web tools.</text>
