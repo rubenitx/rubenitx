@@ -1,8 +1,9 @@
 {
-  "name": "rubenmtzb-profile",
+  "name": "rubenitx-profile",
   "private": true,
-  "description": "Profile README for github.com/rubenmtzb — sources for the generated badge assets.",
+  "description": "Profile README for github.com/rubenitx: sources for the generated header and badge assets.",
   "scripts": {
+    "build:header": "node tools/build-orbits.mjs",
     "build:badges": "node tools/build-badges.mjs"
   },
   "devDependencies": {
