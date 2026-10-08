@@ -90,16 +90,6 @@ function rowFragment(items, y) {
   return { svg: `<g transform="translate(0 ${y})">${body}</g>`, width: r2(x - GAP) };
 }
 
-/** A standalone row SVG sized to its own content (used for the per-project tech strips). */
-function row(name, items, aria) {
-  const { svg, width } = rowFragment(items, 0);
-  const out =
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${H}" width="${width}" height="${H}" ` +
-    `role="img" aria-label="${esc(aria)}">${svg}</svg>\n`;
-  writeFileSync(`${OUT}/${name}.svg`, out);
-  return { name, bytes: Buffer.byteLength(out), count: items.length, width };
-}
-
 /**
  * The whole stack section as ONE file.
  *
@@ -194,24 +184,7 @@ const stack = stackSheet('stack', [
   ] },
 ]);
 
-const rows = [stack,
-  row('tech-transcriber', [
-    icon('openjdk', { label: 'Java 21', hex: '#F89820' }), icon('springboot', { label: 'Spring Boot' }),
-    icon('astro', { hex: '#BC52EE' }), icon('react'),
-  ], 'Built with Java 21, Spring Boot, Astro, React'),
-
-  row('tech-financecore', [
-    icon('react'), icon('typescript'), icon('fastapi'), icon('postgresql', { label: 'PostgreSQL' }),
-  ], 'Built with React, TypeScript, FastAPI, PostgreSQL'),
-
-  row('tech-sars', [
-    icon('typescript'), icon('php', { hex: '#8892BF' }), icon('python', { hex: '#4B8BBE' }), icon('d3', { label: 'D3.js' }),
-  ], 'Built with TypeScript, PHP, Python, D3.js'),
-
-  row('tech-portfolio', [
-    icon('astro', { hex: '#BC52EE' }), icon('tailwindcss', { label: 'Tailwind CSS' }), icon('typescript'),
-  ], 'Built with Astro, Tailwind CSS, TypeScript'),
-];
+const rows = [stack];
 
 const buttons = [
   button('link-portfolio', SITE),
@@ -219,10 +192,6 @@ const buttons = [
   button('link-email',     icon('gmail', { label: 'Email' })),
   button('link-orcid',     icon('orcid', { label: 'ORCID' })),
   button('link-cv',        icon('readdotcv', { label: 'CV', hex: '#00D9FF' })),
-  button('cta-email',      icon('gmail', { label: 'Write to me' })),
-  button('cta-linkedin',   { ...LINKEDIN, label: "Let's connect" }),
-  button('cta-cv',         icon('readdotcv', { label: 'Read my CV', hex: '#00D9FF' })),
-  button('cta-research',   icon('orcid', { label: 'Research' })),
 ];
 
 const all = [...rows, ...buttons];
