@@ -218,6 +218,7 @@ const buttons = [
   button('link-linkedin',  { ...LINKEDIN, label: 'LinkedIn' }),
   button('link-email',     icon('gmail', { label: 'Email' })),
   button('link-orcid',     icon('orcid', { label: 'ORCID' })),
+  button('link-cv',        icon('readdotcv', { label: 'CV', hex: '#00D9FF' })),
   button('cta-email',      icon('gmail', { label: 'Write to me' })),
   button('cta-linkedin',   { ...LINKEDIN, label: "Let's connect" }),
   button('cta-cv',         icon('readdotcv', { label: 'Read my CV', hex: '#00D9FF' })),
