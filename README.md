@@ -29,11 +29,16 @@ Outside work I build small products end to end, from the API to the release: a s
 <table>
   <tr>
     <td colspan="2" valign="top">
-      <a href="https://github.com/rubenitx/stackshot"><img src="assets/shots/stackshot.jpg" width="100%" alt="Stackshot floating stack of thumbnails next to the editor annotating a screenshot with a curved arrow, numbered steps and a label" /></a>
+      <a href="https://stackshot.rubenitx.me">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/shots/stackshot.jpg" />
+          <img src="assets/shots/stackshot.webp" width="100%" alt="Stackshot in action: selecting an area, marking it up with arrows and steps, covering an IBAN and an e-mail, recording with the webcam bubble and finding a capture by the text inside it" />
+        </picture>
+      </a>
       <h3>Stackshot</h3>
-      <p>A screenshot tool for Windows. Press <kbd>Print Screen</kbd>, select an area, and the capture stays in a floating stack, ready to drag into a chat, paste or annotate. It also handles scrolling capture, MP4 and GIF recording and pinning to the screen, all from a single 0.7 MB executable that installs without admin rights.</p>
-      <p><sub>C# · WinForms · .NET Framework</sub></p>
-      <p><a href="https://github.com/rubenitx/stackshot/releases/latest"><b>Download</b></a> · <a href="https://github.com/rubenitx/stackshot">Source</a> · <a href="https://github.com/rubenitx/stackshot/blob/main/CHANGELOG.md">Changelog</a></p>
+      <p>A free, open source screenshot tool and screen recorder for Windows. Press <kbd>Print Screen</kbd>, select an area, and the capture waits in a floating stack, ready to paste, drag into a chat or annotate. It also takes scrolling captures, records MP4 and GIF with sound, finds old captures by the text inside them and covers IDs, IBANs and e-mails before you share. Everything stays on your PC, in a 2.2 MB executable that installs without admin rights.</p>
+      <p><sub>C# · WinForms · WPF · .NET Framework 4.8</sub></p>
+      <p><a href="https://stackshot.rubenitx.me"><b>Website</b></a> · <a href="https://stackshot.rubenitx.me/#video-en">Watch the film</a> · <a href="https://github.com/rubenitx/stackshot/releases/latest">Download</a> · <a href="https://github.com/rubenitx/stackshot">Source</a> · <a href="https://github.com/rubenitx/stackshot/blob/main/CHANGELOG.md">Changelog</a></p>
     </td>
   </tr>
   <tr>
